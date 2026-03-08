@@ -1,0 +1,40 @@
+{
+  "name": "marp-lyric-video",
+  "version": "1.0.0",
+  "description": "Marp Markdown to Lyric Video Generator using Remotion",
+  "main": "index.ts",
+  "scripts": {
+    "studio": "remotion studio index.ts",
+    "build": "remotion bundle index.ts",
+    "render": "remotion render index.ts LyricVideo out/video.mp4",
+    "render:preview": "remotion render index.ts LyricVideoPreview out/preview.mp4",
+    "convert": "npx ts-node cli.ts",
+    "generate": "npx ts-node generate-slides.ts",
+    "import": "npx ts-node import-lyrics.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "marp",
+    "remotion",
+    "lyric-video",
+    "music-video",
+    "markdown"
+  ],
+  "author": "AICU Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "@marp-team/marp-core": "^4.3.0",
+    "@remotion/bundler": "^4.0.434",
+    "@remotion/cli": "^4.0.434",
+    "@remotion/renderer": "^4.0.434",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.434"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
