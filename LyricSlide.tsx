@@ -34,8 +34,9 @@ export const LyricSlide: React.FC<LyricSlideProps> = ({
 
   // アニメーション計算
   const getAnimationStyle = (): React.CSSProperties => {
-    const fadeInDuration = fps * 0.3; // 0.3秒でフェードイン
-    const fadeOutStart = durationInFrames - fps * 0.3;
+    const maxFade = Math.min(fps * 0.3, durationInFrames / 3);
+    const fadeInDuration = maxFade;
+    const fadeOutStart = durationInFrames - maxFade;
 
     switch (animation) {
       case "fade": {
